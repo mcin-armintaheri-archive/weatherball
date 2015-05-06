@@ -2,26 +2,26 @@
   "modules" : {
     "normalize"            : true,
     "print"                : false,
-    "glyphicons"           : false,
+    "glyphicons"           : true,
 
-    "scaffolding"          : false,
+    "scaffolding"          : true,
     "type"                 : false,
     "code"                 : false,
-    "grid"                 : false,
+    "grid"                 : true,
     "tables"               : false,
     "forms"                : false,
     "buttons"              : false,
 
     "component-animations" : false,
     "dropdowns"            : false,
-    "button-groups"        : false,
+    "button-groups"        : true,
     "input-groups"         : false,
     "navs"                 : false,
     "navbar"               : false,
     "breadcrumbs"          : false,
     "pagination"           : false,
     "pager"                : false,
-    "labels"               : false,
+    "labels"               : true,
 
     "badges"               : false,
     "jumbotron"            : false,
@@ -49,6 +49,6 @@
     "transition"           : false,
 
     "utilities"            : false,
-    "responsive-utilities" : false
+    "responsive-utilities" : true
   }
 }

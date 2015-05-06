@@ -3,11 +3,17 @@
 </head>
 
 <body>
-  <ul>
-    {{#each cities}}
-      {{> city}}
-    {{/each}}
-  </ul>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+	<ul>
+	  {{#each cities}}
+	  {{> city}}
+	  {{/each}}
+	</ul>
+      </div>
+    </div>
+  </div>
 </body>
 
 <template name="city">

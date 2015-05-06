@@ -437,3 +437,1078 @@ td,
 th {
   padding: 0;
 }
+
+
+
+// @import "bootstrap/less/glyphicons.less"
+//
+// Glyphicons for Bootstrap
+//
+// Since icons are fonts, they can be placed anywhere text is placed and are
+// thus automatically sized to match the surrounding child. To use, create an
+// inline element with the appropriate classes, like so:
+//
+// <a href="#"><span class="glyphicon glyphicon-star"></span> Star</a>
+
+// Import the fonts
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('@{icon-font-path}@{icon-font-name}.eot');
+  src: url('@{icon-font-path}@{icon-font-name}.eot?#iefix') format('embedded-opentype'),
+       url('@{icon-font-path}@{icon-font-name}.woff2') format('woff2'),
+       url('@{icon-font-path}@{icon-font-name}.woff') format('woff'),
+       url('@{icon-font-path}@{icon-font-name}.ttf') format('truetype'),
+       url('@{icon-font-path}@{icon-font-name}.svg#@{icon-font-svg-id}') format('svg');
+}
+
+// Catchall baseclass
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Individual icons
+.glyphicon-asterisk               { &:before { content: "\2a"; } }
+.glyphicon-plus                   { &:before { content: "\2b"; } }
+.glyphicon-euro,
+.glyphicon-eur                    { &:before { content: "\20ac"; } }
+.glyphicon-minus                  { &:before { content: "\2212"; } }
+.glyphicon-cloud                  { &:before { content: "\2601"; } }
+.glyphicon-envelope               { &:before { content: "\2709"; } }
+.glyphicon-pencil                 { &:before { content: "\270f"; } }
+.glyphicon-glass                  { &:before { content: "\e001"; } }
+.glyphicon-music                  { &:before { content: "\e002"; } }
+.glyphicon-search                 { &:before { content: "\e003"; } }
+.glyphicon-heart                  { &:before { content: "\e005"; } }
+.glyphicon-star                   { &:before { content: "\e006"; } }
+.glyphicon-star-empty             { &:before { content: "\e007"; } }
+.glyphicon-user                   { &:before { content: "\e008"; } }
+.glyphicon-film                   { &:before { content: "\e009"; } }
+.glyphicon-th-large               { &:before { content: "\e010"; } }
+.glyphicon-th                     { &:before { content: "\e011"; } }
+.glyphicon-th-list                { &:before { content: "\e012"; } }
+.glyphicon-ok                     { &:before { content: "\e013"; } }
+.glyphicon-remove                 { &:before { content: "\e014"; } }
+.glyphicon-zoom-in                { &:before { content: "\e015"; } }
+.glyphicon-zoom-out               { &:before { content: "\e016"; } }
+.glyphicon-off                    { &:before { content: "\e017"; } }
+.glyphicon-signal                 { &:before { content: "\e018"; } }
+.glyphicon-cog                    { &:before { content: "\e019"; } }
+.glyphicon-trash                  { &:before { content: "\e020"; } }
+.glyphicon-home                   { &:before { content: "\e021"; } }
+.glyphicon-file                   { &:before { content: "\e022"; } }
+.glyphicon-time                   { &:before { content: "\e023"; } }
+.glyphicon-road                   { &:before { content: "\e024"; } }
+.glyphicon-download-alt           { &:before { content: "\e025"; } }
+.glyphicon-download               { &:before { content: "\e026"; } }
+.glyphicon-upload                 { &:before { content: "\e027"; } }
+.glyphicon-inbox                  { &:before { content: "\e028"; } }
+.glyphicon-play-circle            { &:before { content: "\e029"; } }
+.glyphicon-repeat                 { &:before { content: "\e030"; } }
+.glyphicon-refresh                { &:before { content: "\e031"; } }
+.glyphicon-list-alt               { &:before { content: "\e032"; } }
+.glyphicon-lock                   { &:before { content: "\e033"; } }
+.glyphicon-flag                   { &:before { content: "\e034"; } }
+.glyphicon-headphones             { &:before { content: "\e035"; } }
+.glyphicon-volume-off             { &:before { content: "\e036"; } }
+.glyphicon-volume-down            { &:before { content: "\e037"; } }
+.glyphicon-volume-up              { &:before { content: "\e038"; } }
+.glyphicon-qrcode                 { &:before { content: "\e039"; } }
+.glyphicon-barcode                { &:before { content: "\e040"; } }
+.glyphicon-tag                    { &:before { content: "\e041"; } }
+.glyphicon-tags                   { &:before { content: "\e042"; } }
+.glyphicon-book                   { &:before { content: "\e043"; } }
+.glyphicon-bookmark               { &:before { content: "\e044"; } }
+.glyphicon-print                  { &:before { content: "\e045"; } }
+.glyphicon-camera                 { &:before { content: "\e046"; } }
+.glyphicon-font                   { &:before { content: "\e047"; } }
+.glyphicon-bold                   { &:before { content: "\e048"; } }
+.glyphicon-italic                 { &:before { content: "\e049"; } }
+.glyphicon-text-height            { &:before { content: "\e050"; } }
+.glyphicon-text-width             { &:before { content: "\e051"; } }
+.glyphicon-align-left             { &:before { content: "\e052"; } }
+.glyphicon-align-center           { &:before { content: "\e053"; } }
+.glyphicon-align-right            { &:before { content: "\e054"; } }
+.glyphicon-align-justify          { &:before { content: "\e055"; } }
+.glyphicon-list                   { &:before { content: "\e056"; } }
+.glyphicon-indent-left            { &:before { content: "\e057"; } }
+.glyphicon-indent-right           { &:before { content: "\e058"; } }
+.glyphicon-facetime-video         { &:before { content: "\e059"; } }
+.glyphicon-picture                { &:before { content: "\e060"; } }
+.glyphicon-map-marker             { &:before { content: "\e062"; } }
+.glyphicon-adjust                 { &:before { content: "\e063"; } }
+.glyphicon-tint                   { &:before { content: "\e064"; } }
+.glyphicon-edit                   { &:before { content: "\e065"; } }
+.glyphicon-share                  { &:before { content: "\e066"; } }
+.glyphicon-check                  { &:before { content: "\e067"; } }
+.glyphicon-move                   { &:before { content: "\e068"; } }
+.glyphicon-step-backward          { &:before { content: "\e069"; } }
+.glyphicon-fast-backward          { &:before { content: "\e070"; } }
+.glyphicon-backward               { &:before { content: "\e071"; } }
+.glyphicon-play                   { &:before { content: "\e072"; } }
+.glyphicon-pause                  { &:before { content: "\e073"; } }
+.glyphicon-stop                   { &:before { content: "\e074"; } }
+.glyphicon-forward                { &:before { content: "\e075"; } }
+.glyphicon-fast-forward           { &:before { content: "\e076"; } }
+.glyphicon-step-forward           { &:before { content: "\e077"; } }
+.glyphicon-eject                  { &:before { content: "\e078"; } }
+.glyphicon-chevron-left           { &:before { content: "\e079"; } }
+.glyphicon-chevron-right          { &:before { content: "\e080"; } }
+.glyphicon-plus-sign              { &:before { content: "\e081"; } }
+.glyphicon-minus-sign             { &:before { content: "\e082"; } }
+.glyphicon-remove-sign            { &:before { content: "\e083"; } }
+.glyphicon-ok-sign                { &:before { content: "\e084"; } }
+.glyphicon-question-sign          { &:before { content: "\e085"; } }
+.glyphicon-info-sign              { &:before { content: "\e086"; } }
+.glyphicon-screenshot             { &:before { content: "\e087"; } }
+.glyphicon-remove-circle          { &:before { content: "\e088"; } }
+.glyphicon-ok-circle              { &:before { content: "\e089"; } }
+.glyphicon-ban-circle             { &:before { content: "\e090"; } }
+.glyphicon-arrow-left             { &:before { content: "\e091"; } }
+.glyphicon-arrow-right            { &:before { content: "\e092"; } }
+.glyphicon-arrow-up               { &:before { content: "\e093"; } }
+.glyphicon-arrow-down             { &:before { content: "\e094"; } }
+.glyphicon-share-alt              { &:before { content: "\e095"; } }
+.glyphicon-resize-full            { &:before { content: "\e096"; } }
+.glyphicon-resize-small           { &:before { content: "\e097"; } }
+.glyphicon-exclamation-sign       { &:before { content: "\e101"; } }
+.glyphicon-gift                   { &:before { content: "\e102"; } }
+.glyphicon-leaf                   { &:before { content: "\e103"; } }
+.glyphicon-fire                   { &:before { content: "\e104"; } }
+.glyphicon-eye-open               { &:before { content: "\e105"; } }
+.glyphicon-eye-close              { &:before { content: "\e106"; } }
+.glyphicon-warning-sign           { &:before { content: "\e107"; } }
+.glyphicon-plane                  { &:before { content: "\e108"; } }
+.glyphicon-calendar               { &:before { content: "\e109"; } }
+.glyphicon-random                 { &:before { content: "\e110"; } }
+.glyphicon-comment                { &:before { content: "\e111"; } }
+.glyphicon-magnet                 { &:before { content: "\e112"; } }
+.glyphicon-chevron-up             { &:before { content: "\e113"; } }
+.glyphicon-chevron-down           { &:before { content: "\e114"; } }
+.glyphicon-retweet                { &:before { content: "\e115"; } }
+.glyphicon-shopping-cart          { &:before { content: "\e116"; } }
+.glyphicon-folder-close           { &:before { content: "\e117"; } }
+.glyphicon-folder-open            { &:before { content: "\e118"; } }
+.glyphicon-resize-vertical        { &:before { content: "\e119"; } }
+.glyphicon-resize-horizontal      { &:before { content: "\e120"; } }
+.glyphicon-hdd                    { &:before { content: "\e121"; } }
+.glyphicon-bullhorn               { &:before { content: "\e122"; } }
+.glyphicon-bell                   { &:before { content: "\e123"; } }
+.glyphicon-certificate            { &:before { content: "\e124"; } }
+.glyphicon-thumbs-up              { &:before { content: "\e125"; } }
+.glyphicon-thumbs-down            { &:before { content: "\e126"; } }
+.glyphicon-hand-right             { &:before { content: "\e127"; } }
+.glyphicon-hand-left              { &:before { content: "\e128"; } }
+.glyphicon-hand-up                { &:before { content: "\e129"; } }
+.glyphicon-hand-down              { &:before { content: "\e130"; } }
+.glyphicon-circle-arrow-right     { &:before { content: "\e131"; } }
+.glyphicon-circle-arrow-left      { &:before { content: "\e132"; } }
+.glyphicon-circle-arrow-up        { &:before { content: "\e133"; } }
+.glyphicon-circle-arrow-down      { &:before { content: "\e134"; } }
+.glyphicon-globe                  { &:before { content: "\e135"; } }
+.glyphicon-wrench                 { &:before { content: "\e136"; } }
+.glyphicon-tasks                  { &:before { content: "\e137"; } }
+.glyphicon-filter                 { &:before { content: "\e138"; } }
+.glyphicon-briefcase              { &:before { content: "\e139"; } }
+.glyphicon-fullscreen             { &:before { content: "\e140"; } }
+.glyphicon-dashboard              { &:before { content: "\e141"; } }
+.glyphicon-paperclip              { &:before { content: "\e142"; } }
+.glyphicon-heart-empty            { &:before { content: "\e143"; } }
+.glyphicon-link                   { &:before { content: "\e144"; } }
+.glyphicon-phone                  { &:before { content: "\e145"; } }
+.glyphicon-pushpin                { &:before { content: "\e146"; } }
+.glyphicon-usd                    { &:before { content: "\e148"; } }
+.glyphicon-gbp                    { &:before { content: "\e149"; } }
+.glyphicon-sort                   { &:before { content: "\e150"; } }
+.glyphicon-sort-by-alphabet       { &:before { content: "\e151"; } }
+.glyphicon-sort-by-alphabet-alt   { &:before { content: "\e152"; } }
+.glyphicon-sort-by-order          { &:before { content: "\e153"; } }
+.glyphicon-sort-by-order-alt      { &:before { content: "\e154"; } }
+.glyphicon-sort-by-attributes     { &:before { content: "\e155"; } }
+.glyphicon-sort-by-attributes-alt { &:before { content: "\e156"; } }
+.glyphicon-unchecked              { &:before { content: "\e157"; } }
+.glyphicon-expand                 { &:before { content: "\e158"; } }
+.glyphicon-collapse-down          { &:before { content: "\e159"; } }
+.glyphicon-collapse-up            { &:before { content: "\e160"; } }
+.glyphicon-log-in                 { &:before { content: "\e161"; } }
+.glyphicon-flash                  { &:before { content: "\e162"; } }
+.glyphicon-log-out                { &:before { content: "\e163"; } }
+.glyphicon-new-window             { &:before { content: "\e164"; } }
+.glyphicon-record                 { &:before { content: "\e165"; } }
+.glyphicon-save                   { &:before { content: "\e166"; } }
+.glyphicon-open                   { &:before { content: "\e167"; } }
+.glyphicon-saved                  { &:before { content: "\e168"; } }
+.glyphicon-import                 { &:before { content: "\e169"; } }
+.glyphicon-export                 { &:before { content: "\e170"; } }
+.glyphicon-send                   { &:before { content: "\e171"; } }
+.glyphicon-floppy-disk            { &:before { content: "\e172"; } }
+.glyphicon-floppy-saved           { &:before { content: "\e173"; } }
+.glyphicon-floppy-remove          { &:before { content: "\e174"; } }
+.glyphicon-floppy-save            { &:before { content: "\e175"; } }
+.glyphicon-floppy-open            { &:before { content: "\e176"; } }
+.glyphicon-credit-card            { &:before { content: "\e177"; } }
+.glyphicon-transfer               { &:before { content: "\e178"; } }
+.glyphicon-cutlery                { &:before { content: "\e179"; } }
+.glyphicon-header                 { &:before { content: "\e180"; } }
+.glyphicon-compressed             { &:before { content: "\e181"; } }
+.glyphicon-earphone               { &:before { content: "\e182"; } }
+.glyphicon-phone-alt              { &:before { content: "\e183"; } }
+.glyphicon-tower                  { &:before { content: "\e184"; } }
+.glyphicon-stats                  { &:before { content: "\e185"; } }
+.glyphicon-sd-video               { &:before { content: "\e186"; } }
+.glyphicon-hd-video               { &:before { content: "\e187"; } }
+.glyphicon-subtitles              { &:before { content: "\e188"; } }
+.glyphicon-sound-stereo           { &:before { content: "\e189"; } }
+.glyphicon-sound-dolby            { &:before { content: "\e190"; } }
+.glyphicon-sound-5-1              { &:before { content: "\e191"; } }
+.glyphicon-sound-6-1              { &:before { content: "\e192"; } }
+.glyphicon-sound-7-1              { &:before { content: "\e193"; } }
+.glyphicon-copyright-mark         { &:before { content: "\e194"; } }
+.glyphicon-registration-mark      { &:before { content: "\e195"; } }
+.glyphicon-cloud-download         { &:before { content: "\e197"; } }
+.glyphicon-cloud-upload           { &:before { content: "\e198"; } }
+.glyphicon-tree-conifer           { &:before { content: "\e199"; } }
+.glyphicon-tree-deciduous         { &:before { content: "\e200"; } }
+.glyphicon-cd                     { &:before { content: "\e201"; } }
+.glyphicon-save-file              { &:before { content: "\e202"; } }
+.glyphicon-open-file              { &:before { content: "\e203"; } }
+.glyphicon-level-up               { &:before { content: "\e204"; } }
+.glyphicon-copy                   { &:before { content: "\e205"; } }
+.glyphicon-paste                  { &:before { content: "\e206"; } }
+// The following 2 Glyphicons are omitted for the time being because
+// they currently use Unicode codepoints that are outside the
+// Basic Multilingual Plane (BMP). Older buggy versions of WebKit can't handle
+// non-BMP codepoints in CSS string escapes, and thus can't display these two icons.
+// Notably, the bug affects some older versions of the Android Browser.
+// More info: https://github.com/twbs/bootstrap/issues/10106
+// .glyphicon-door                   { &:before { content: "\1f6aa"; } }
+// .glyphicon-key                    { &:before { content: "\1f511"; } }
+.glyphicon-alert                  { &:before { content: "\e209"; } }
+.glyphicon-equalizer              { &:before { content: "\e210"; } }
+.glyphicon-king                   { &:before { content: "\e211"; } }
+.glyphicon-queen                  { &:before { content: "\e212"; } }
+.glyphicon-pawn                   { &:before { content: "\e213"; } }
+.glyphicon-bishop                 { &:before { content: "\e214"; } }
+.glyphicon-knight                 { &:before { content: "\e215"; } }
+.glyphicon-baby-formula           { &:before { content: "\e216"; } }
+.glyphicon-tent                   { &:before { content: "\26fa"; } }
+.glyphicon-blackboard             { &:before { content: "\e218"; } }
+.glyphicon-bed                    { &:before { content: "\e219"; } }
+.glyphicon-apple                  { &:before { content: "\f8ff"; } }
+.glyphicon-erase                  { &:before { content: "\e221"; } }
+.glyphicon-hourglass              { &:before { content: "\231b"; } }
+.glyphicon-lamp                   { &:before { content: "\e223"; } }
+.glyphicon-duplicate              { &:before { content: "\e224"; } }
+.glyphicon-piggy-bank             { &:before { content: "\e225"; } }
+.glyphicon-scissors               { &:before { content: "\e226"; } }
+.glyphicon-bitcoin                { &:before { content: "\e227"; } }
+.glyphicon-btc                    { &:before { content: "\e227"; } }
+.glyphicon-xbt                    { &:before { content: "\e227"; } }
+.glyphicon-yen                    { &:before { content: "\00a5"; } }
+.glyphicon-jpy                    { &:before { content: "\00a5"; } }
+.glyphicon-ruble                  { &:before { content: "\20bd"; } }
+.glyphicon-rub                    { &:before { content: "\20bd"; } }
+.glyphicon-scale                  { &:before { content: "\e230"; } }
+.glyphicon-ice-lolly              { &:before { content: "\e231"; } }
+.glyphicon-ice-lolly-tasted       { &:before { content: "\e232"; } }
+.glyphicon-education              { &:before { content: "\e233"; } }
+.glyphicon-option-horizontal      { &:before { content: "\e234"; } }
+.glyphicon-option-vertical        { &:before { content: "\e235"; } }
+.glyphicon-menu-hamburger         { &:before { content: "\e236"; } }
+.glyphicon-modal-window           { &:before { content: "\e237"; } }
+.glyphicon-oil                    { &:before { content: "\e238"; } }
+.glyphicon-grain                  { &:before { content: "\e239"; } }
+.glyphicon-sunglasses             { &:before { content: "\e240"; } }
+.glyphicon-text-size              { &:before { content: "\e241"; } }
+.glyphicon-text-color             { &:before { content: "\e242"; } }
+.glyphicon-text-background        { &:before { content: "\e243"; } }
+.glyphicon-object-align-top       { &:before { content: "\e244"; } }
+.glyphicon-object-align-bottom    { &:before { content: "\e245"; } }
+.glyphicon-object-align-horizontal{ &:before { content: "\e246"; } }
+.glyphicon-object-align-left      { &:before { content: "\e247"; } }
+.glyphicon-object-align-vertical  { &:before { content: "\e248"; } }
+.glyphicon-object-align-right     { &:before { content: "\e249"; } }
+.glyphicon-triangle-right         { &:before { content: "\e250"; } }
+.glyphicon-triangle-left          { &:before { content: "\e251"; } }
+.glyphicon-triangle-bottom        { &:before { content: "\e252"; } }
+.glyphicon-triangle-top           { &:before { content: "\e253"; } }
+.glyphicon-console                { &:before { content: "\e254"; } }
+.glyphicon-superscript            { &:before { content: "\e255"; } }
+.glyphicon-subscript              { &:before { content: "\e256"; } }
+.glyphicon-menu-left              { &:before { content: "\e257"; } }
+.glyphicon-menu-right             { &:before { content: "\e258"; } }
+.glyphicon-menu-down              { &:before { content: "\e259"; } }
+.glyphicon-menu-up                { &:before { content: "\e260"; } }
+
+
+
+// @import "bootstrap/less/scaffolding.less"
+//
+// Scaffolding
+// --------------------------------------------------
+
+
+// Reset the box-sizing
+//
+// Heads up! This reset may cause conflicts with some third-party widgets.
+// For recommendations on resolving such conflicts, see
+// http://getbootstrap.com/getting-started/#third-box-sizing
+* {
+  .box-sizing(border-box);
+}
+*:before,
+*:after {
+  .box-sizing(border-box);
+}
+
+
+// Body reset
+
+html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+  font-family: @font-family-base;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  color: @text-color;
+  background-color: @body-bg;
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+
+// Links
+
+a {
+  color: @link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: @link-hover-color;
+    text-decoration: @link-hover-decoration;
+  }
+
+  &:focus {
+    .tab-focus();
+  }
+}
+
+
+// Figures
+//
+// We reset this here because previously Normalize had no `figure` margins. This
+// ensures we don't break anyone's use of the element.
+
+figure {
+  margin: 0;
+}
+
+
+// Images
+
+img {
+  vertical-align: middle;
+}
+
+// Responsive images (ensure images don't scale beyond their parents)
+.img-responsive {
+  .img-responsive();
+}
+
+// Rounded corners
+.img-rounded {
+  border-radius: @border-radius-large;
+}
+
+// Image thumbnails
+//
+// Heads up! This is mixin-ed into thumbnails.less for `.thumbnail`.
+.img-thumbnail {
+  padding: @thumbnail-padding;
+  line-height: @line-height-base;
+  background-color: @thumbnail-bg;
+  border: 1px solid @thumbnail-border;
+  border-radius: @thumbnail-border-radius;
+  .transition(all .2s ease-in-out);
+
+  // Keep them at most 100% wide
+  .img-responsive(inline-block);
+}
+
+// Perfect circle
+.img-circle {
+  border-radius: 50%; // set radius in percents
+}
+
+
+// Horizontal rules
+
+hr {
+  margin-top:    @line-height-computed;
+  margin-bottom: @line-height-computed;
+  border: 0;
+  border-top: 1px solid @hr-border;
+}
+
+
+// Only display content to screen readers
+//
+// See: http://a11yproject.com/posts/how-to-hide-content/
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+// Use in conjunction with .sr-only to only display content when it's focused.
+// Useful for "Skip to main content" links; see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+// Credit: HTML5 Boilerplate
+
+.sr-only-focusable {
+  &:active,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
+}
+
+
+// iOS "clickable elements" fix for role="button"
+//
+// Fixes "clickability" issue (and more generally, the firing of events such as focus as well)
+// for traditionally non-focusable elements with role="button"
+// see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+// Upstream patch for normalize.css submitted: https://github.com/necolas/normalize.css/pull/379 - remove this fix once that is merged
+
+[role="button"] {
+  cursor: pointer;
+}
+
+
+// @import "bootstrap/less/grid.less"
+//
+// Grid system
+// --------------------------------------------------
+
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.container {
+  .container-fixed();
+
+  @media (min-width: @screen-sm-min) {
+    width: @container-sm;
+  }
+  @media (min-width: @screen-md-min) {
+    width: @container-md;
+  }
+  @media (min-width: @screen-lg-min) {
+    width: @container-lg;
+  }
+}
+
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+.container-fluid {
+  .container-fixed();
+}
+
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+.row {
+  .make-row();
+}
+
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+.make-grid-columns();
+
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+
+.make-grid(xs);
+
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: @screen-sm-min) {
+  .make-grid(sm);
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: @screen-md-min) {
+  .make-grid(md);
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: @screen-lg-min) {
+  .make-grid(lg);
+}
+
+
+
+// @import "bootstrap/less/button-groups.less"
+//
+// Button groups
+// --------------------------------------------------
+
+// Make the div behave like a button
+.btn-group,
+.btn-group-vertical {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle; // match .btn alignment given font-size hack above
+  > .btn {
+    position: relative;
+    float: left;
+    // Bring the "active" button to the front
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      z-index: 2;
+    }
+  }
+}
+
+// Prevent double borders when buttons are next to each other
+.btn-group {
+  .btn + .btn,
+  .btn + .btn-group,
+  .btn-group + .btn,
+  .btn-group + .btn-group {
+    margin-left: -1px;
+  }
+}
+
+// Optional: Group multiple button groups together for a toolbar
+.btn-toolbar {
+  margin-left: -5px; // Offset the first child's margin
+  &:extend(.clearfix all);
+
+  .btn-group,
+  .input-group {
+    float: left;
+  }
+  > .btn,
+  > .btn-group,
+  > .input-group {
+    margin-left: 5px;
+  }
+}
+
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+  border-radius: 0;
+}
+
+// Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
+.btn-group > .btn:first-child {
+  margin-left: 0;
+  &:not(:last-child):not(.dropdown-toggle) {
+    .border-right-radius(0);
+  }
+}
+// Need .dropdown-toggle since :last-child doesn't apply given a .dropdown-menu immediately after it
+.btn-group > .btn:last-child:not(:first-child),
+.btn-group > .dropdown-toggle:not(:first-child) {
+  .border-left-radius(0);
+}
+
+// Custom edits for including btn-groups within btn-groups (useful for including dropdown buttons within a btn-group)
+.btn-group > .btn-group {
+  float: left;
+}
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
+  border-radius: 0;
+}
+.btn-group > .btn-group:first-child:not(:last-child) {
+  > .btn:last-child,
+  > .dropdown-toggle {
+    .border-right-radius(0);
+  }
+}
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {
+  .border-left-radius(0);
+}
+
+// On active and open, don't show outline
+.btn-group .dropdown-toggle:active,
+.btn-group.open .dropdown-toggle {
+  outline: 0;
+}
+
+
+// Sizing
+//
+// Remix the default button sizing classes into new ones for easier manipulation.
+
+.btn-group-xs > .btn { &:extend(.btn-xs); }
+.btn-group-sm > .btn { &:extend(.btn-sm); }
+.btn-group-lg > .btn { &:extend(.btn-lg); }
+
+
+// Split button dropdowns
+// ----------------------
+
+// Give the line between buttons some depth
+.btn-group > .btn + .dropdown-toggle {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.btn-group > .btn-lg + .dropdown-toggle {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+// The clickable button for toggling the menu
+// Remove the gradient and set the same inset shadow as the :active state
+.btn-group.open .dropdown-toggle {
+  .box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+
+  // Show no shadow for `.btn-link` since it has no other button styles.
+  &.btn-link {
+    .box-shadow(none);
+  }
+}
+
+
+// Reposition the caret
+.btn .caret {
+  margin-left: 0;
+}
+// Carets in other button sizes
+.btn-lg .caret {
+  border-width: @caret-width-large @caret-width-large 0;
+  border-bottom-width: 0;
+}
+// Upside down carets for .dropup
+.dropup .btn-lg .caret {
+  border-width: 0 @caret-width-large @caret-width-large;
+}
+
+
+// Vertical button groups
+// ----------------------
+
+.btn-group-vertical {
+  > .btn,
+  > .btn-group,
+  > .btn-group > .btn {
+    display: block;
+    float: none;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  // Clear floats so dropdown menus can be properly placed
+  > .btn-group {
+    &:extend(.clearfix all);
+    > .btn {
+      float: none;
+    }
+  }
+
+  > .btn + .btn,
+  > .btn + .btn-group,
+  > .btn-group + .btn,
+  > .btn-group + .btn-group {
+    margin-top: -1px;
+    margin-left: 0;
+  }
+}
+
+.btn-group-vertical > .btn {
+  &:not(:first-child):not(:last-child) {
+    border-radius: 0;
+  }
+  &:first-child:not(:last-child) {
+    border-top-right-radius: @border-radius-base;
+    .border-bottom-radius(0);
+  }
+  &:last-child:not(:first-child) {
+    border-bottom-left-radius: @border-radius-base;
+    .border-top-radius(0);
+  }
+}
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
+  border-radius: 0;
+}
+.btn-group-vertical > .btn-group:first-child:not(:last-child) {
+  > .btn:last-child,
+  > .dropdown-toggle {
+    .border-bottom-radius(0);
+  }
+}
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {
+  .border-top-radius(0);
+}
+
+
+// Justified button groups
+// ----------------------
+
+.btn-group-justified {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  > .btn,
+  > .btn-group {
+    float: none;
+    display: table-cell;
+    width: 1%;
+  }
+  > .btn-group .btn {
+    width: 100%;
+  }
+
+  > .btn-group .dropdown-menu {
+    left: auto;
+  }
+}
+
+
+// Checkbox and radio options
+//
+// In order to support the browser's form validation feedback, powered by the
+// `required` attribute, we have to "hide" the inputs via `clip`. We cannot use
+// `display: none;` or `visibility: hidden;` as that also hides the popover.
+// Simply visually hiding the inputs via `opacity` would leave them clickable in
+// certain cases which is prevented by using `clip` and `pointer-events`.
+// This way, we ensure a DOM element is visible to position the popover from.
+//
+// See https://github.com/twbs/bootstrap/pull/12794 and
+// https://github.com/twbs/bootstrap/pull/14559 for more information.
+
+[data-toggle="buttons"] {
+  > .btn,
+  > .btn-group > .btn {
+    input[type="radio"],
+    input[type="checkbox"] {
+      position: absolute;
+      clip: rect(0,0,0,0);
+      pointer-events: none;
+    }
+  }
+}
+
+
+
+// @import "bootstrap/less/labels.less"
+//
+// Labels
+// --------------------------------------------------
+
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: @label-color;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+
+  // Add hover effects, but only for links
+  a& {
+    &:hover,
+    &:focus {
+      color: @label-link-hover-color;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  // Empty labels collapse automatically (not available in IE8)
+  &:empty {
+    display: none;
+  }
+
+  // Quick fix for labels in buttons
+  .btn & {
+    position: relative;
+    top: -1px;
+  }
+}
+
+// Colors
+// Contextual variations (linked labels get darker on :hover)
+
+.label-default {
+  .label-variant(@label-default-bg);
+}
+
+.label-primary {
+  .label-variant(@label-primary-bg);
+}
+
+.label-success {
+  .label-variant(@label-success-bg);
+}
+
+.label-info {
+  .label-variant(@label-info-bg);
+}
+
+.label-warning {
+  .label-variant(@label-warning-bg);
+}
+
+.label-danger {
+  .label-variant(@label-danger-bg);
+}
+
+
+
+// @import "bootstrap/less/responsive-utilities.less"
+//
+// Responsive: Utility classes
+// --------------------------------------------------
+
+
+// IE10 in Windows (Phone) 8
+//
+// Support for responsive views via media queries is kind of borked in IE10, for
+// Surface/desktop in split view and for Windows Phone 8. This particular fix
+// must be accompanied by a snippet of JavaScript to sniff the user agent and
+// apply some conditional CSS to *only* the Surface/desktop Windows 8. Look at
+// our Getting Started page for more information on this bug.
+//
+// For more information, see the following:
+//
+// Issue: https://github.com/twbs/bootstrap/issues/10497
+// Docs: http://getbootstrap.com/getting-started/#support-ie10-width
+// Source: http://timkadlec.com/2013/01/windows-phone-8-and-device-width/
+// Source: http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
+
+@-ms-viewport {
+  width: device-width;
+}
+
+
+// Visibility utilities
+// Note: Deprecated .visible-xs, .visible-sm, .visible-md, and .visible-lg as of v3.2.0
+.visible-xs,
+.visible-sm,
+.visible-md,
+.visible-lg {
+  .responsive-invisibility();
+}
+
+.visible-xs-block,
+.visible-xs-inline,
+.visible-xs-inline-block,
+.visible-sm-block,
+.visible-sm-inline,
+.visible-sm-inline-block,
+.visible-md-block,
+.visible-md-inline,
+.visible-md-inline-block,
+.visible-lg-block,
+.visible-lg-inline,
+.visible-lg-inline-block {
+  display: none !important;
+}
+
+.visible-xs {
+  @media (max-width: @screen-xs-max) {
+    .responsive-visibility();
+  }
+}
+.visible-xs-block {
+  @media (max-width: @screen-xs-max) {
+    display: block !important;
+  }
+}
+.visible-xs-inline {
+  @media (max-width: @screen-xs-max) {
+    display: inline !important;
+  }
+}
+.visible-xs-inline-block {
+  @media (max-width: @screen-xs-max) {
+    display: inline-block !important;
+  }
+}
+
+.visible-sm {
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    .responsive-visibility();
+  }
+}
+.visible-sm-block {
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    display: block !important;
+  }
+}
+.visible-sm-inline {
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    display: inline !important;
+  }
+}
+.visible-sm-inline-block {
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    display: inline-block !important;
+  }
+}
+
+.visible-md {
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    .responsive-visibility();
+  }
+}
+.visible-md-block {
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    display: block !important;
+  }
+}
+.visible-md-inline {
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    display: inline !important;
+  }
+}
+.visible-md-inline-block {
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    display: inline-block !important;
+  }
+}
+
+.visible-lg {
+  @media (min-width: @screen-lg-min) {
+    .responsive-visibility();
+  }
+}
+.visible-lg-block {
+  @media (min-width: @screen-lg-min) {
+    display: block !important;
+  }
+}
+.visible-lg-inline {
+  @media (min-width: @screen-lg-min) {
+    display: inline !important;
+  }
+}
+.visible-lg-inline-block {
+  @media (min-width: @screen-lg-min) {
+    display: inline-block !important;
+  }
+}
+
+.hidden-xs {
+  @media (max-width: @screen-xs-max) {
+    .responsive-invisibility();
+  }
+}
+.hidden-sm {
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    .responsive-invisibility();
+  }
+}
+.hidden-md {
+  @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    .responsive-invisibility();
+  }
+}
+.hidden-lg {
+  @media (min-width: @screen-lg-min) {
+    .responsive-invisibility();
+  }
+}
+
+
+// Print utilities
+//
+// Media queries are placed on the inside to be mixin-friendly.
+
+// Note: Deprecated .visible-print as of v3.2.0
+.visible-print {
+  .responsive-invisibility();
+
+  @media print {
+    .responsive-visibility();
+  }
+}
+.visible-print-block {
+  display: none !important;
+
+  @media print {
+    display: block !important;
+  }
+}
+.visible-print-inline {
+  display: none !important;
+
+  @media print {
+    display: inline !important;
+  }
+}
+.visible-print-inline-block {
+  display: none !important;
+
+  @media print {
+    display: inline-block !important;
+  }
+}
+
+.hidden-print {
+  @media print {
+    .responsive-invisibility();
+  }
+}
