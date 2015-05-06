@@ -6,17 +6,13 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-4">
-	<ul>
-	  {{#each cities}}
-	  {{> city}}
-	  {{/each}}
-	</ul>
+	{{> globe}}
       </div>
     </div>
   </div>
 </body>
 
-<template name="city">
-  <li>{{name}}</li>
+<template name="globe">
+  <canvas id="globe-cv"></canvas>
 </template>
 
