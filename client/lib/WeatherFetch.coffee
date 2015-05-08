@@ -1,16 +1,24 @@
 
-@WeatherFetch = (URI, earth) ->
+@WeatherFetch = (URL, earth) ->
   getWeatherData = (city) ->
     jQuery ($) ->
-      $.ajax
-        url: "http://api.openweathermap.org/data/2.5/weather?q=" + city
-       .done (data) ->
-          document.write data
-        
+      $
+        .ajax
+          url: URL + city
+        .done (data) ->
+          markerMarkup = "<h3>" + data.name + ", " + data.sys.country + "</h3><ul>"
+          datalist = ("<li>" + k + ": " + v + "</li>" for k,v of data.main)
+          markerMarkup = markerMarkup + datalist.join('')
+          markerMarkup = markerMarkup + "</ul>"
+          WE.marker [data.coord.lat, data.coord.lon]
+            .addTo earth
+            .bindPopup markerMarkup, {maxWidth: 200, closeButton: true}
+            .openPopup()
+         
   jQuery ($) ->
     $ "#city-search.hide"
       .click ->
-        this
+        $ this
           .removeClass "hide"
           .addClass "expand"
           .delay 300
@@ -18,7 +26,7 @@
             .removeClass "hidden"
     $ "#city-search.expand"
       .find "#search-bar"
-        .submit =>
-          getWeatherData this.find("input:first").val()
+        .submit ->
+          getWeatherData $(this).find("input:first").val()
           return false
 

@@ -10,7 +10,7 @@ if (Meteor.isClient) {
 			
 			earth.setView([51.505, 0], 2);
 			
-			var wf = new WeatherFetch("http://www.google.ca", earth);
+			var wf = new WeatherFetch("http://api.openweathermap.org/data/2.5/weather?q=", earth);
   }
 }
 
