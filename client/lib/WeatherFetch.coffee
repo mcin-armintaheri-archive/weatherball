@@ -8,9 +8,9 @@
         .done (data) ->
           markerMarkup = "<h3>" + data.name + ", " + data.sys.country + "</h3><ul>"
           datalist = ("<li>" + k + ": " + v + "</li>" for k,v of data.main)
-          markerMarkup = markerMarkup + datalist.join('')
-          markerMarkup = markerMarkup + "</ul>"
-          WE.marker [data.coord.lat, data.coord.lon]
+          markerMarkup = markerMarkup + datalist.join('') + "</ul>"
+          WE
+            .marker [data.coord.lat, data.coord.lon]
             .addTo earth
             .bindPopup markerMarkup, {maxWidth: 200, closeButton: true}
             .openPopup()
@@ -27,6 +27,6 @@
     $ "#city-search.expand"
       .find "#search-bar"
         .submit ->
-          getWeatherData $(this).find("input:first").val()
-          return false
+          getWeatherData $(this).find("input:first").val().replace(' ', '_')
+          return false #prevent page refresh after submission
 
