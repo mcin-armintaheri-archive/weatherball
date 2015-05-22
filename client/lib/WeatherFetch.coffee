@@ -24,6 +24,15 @@
           .delay 300
           .find "#search-bar"
             .removeClass "hidden"
+    $ document
+      .mousedown (e) ->
+        if e.target is not $("#city-search.expand")
+          $ "#city-search.expand"
+            .removeClass "expand"
+            .addClass "hide"
+            .delay 300
+            .find "#search-bar"
+              .addClass "hidden"
     $ "#city-search.expand"
       .find "#search-bar"
         .submit ->

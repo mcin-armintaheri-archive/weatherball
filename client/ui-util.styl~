@@ -1,0 +1,12 @@
+
+@import 'nib'
+@import 'nib/gradients'
+@import 'nib/buttons'
+
+#globe-container
+  absolute: top left
+
+#ui-container
+  absolute: top left
+  .city-search
+    
