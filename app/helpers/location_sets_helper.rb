@@ -1,0 +1,2 @@
+module LocationSetsHelper
+end
