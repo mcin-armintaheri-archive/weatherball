@@ -1,15 +1,13 @@
 <div id="canvas-wrap">
     <div id="canvas"></div>
     <div id="sidebar-container" class="slide-in ui">
-        <div id="sidebar">
-            <%= react_component('Searchbox') %>
-            <%= react_component('Locationlist') %>
-        </div>
+        <%= react_component('Sidebar') %>
         <div id="toggle-tab" class="thin-shadow">
             <span class="glyphicon glyphicon-map-marker"></span>
         </div>
     </div>
 </div>
+
 <script>
     //Slide in and out sidebar
     var sidebarContainer = $("#sidebar-container");
@@ -18,7 +16,7 @@
         sidebarContainer.toggleClass("slide-in");
     })
 
-    // resize the canvas to fill browser window dynamically
+    // Resize the canvas to fill browser window dynamically
     var canvas = document.getElementById('canvas');
     
     window.addEventListener('resize', resizeCanvas, false);
@@ -29,26 +27,13 @@
     }
     resizeCanvas();
     
-    // resize the sidebar height to fill browser window dynamically
-    var sb = document.getElementById('sidebar');
-    
-    window.addEventListener('resize', resizesb, false);
-    
-    function resizesb() {
-        sb.style.height = window.innerHeight + "px";
-    }
-    resizesb();
-    
-    $("#sidebar").mCustomScrollbar({
-        theme: 'minimal-dark',
-        axis: 'y'
-    })
-    
-    $(".mCSB_dragger_bar").width(3).css({left: '5px'});
-    
     //webglearth initialization
-    earth = new WE.map('canvas');
-    WE.tileLayer('http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg').addTo(earth);
-    $('#canvas').css({position: 'absolute', 'z-index': '1',})
-    $('canvas').css({position: 'absolute'})
+    //Don't render earth if using Internet Explorer.
+    if(!detectIE()){
+        WG = WE
+        earth = new WE.map('canvas');
+        WE.tileLayer('http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg').addTo(earth);
+        $('#canvas').css({position: 'absolute', 'z-index': '1',})
+        $('canvas').css({position: 'absolute'})
+    }
 </script>

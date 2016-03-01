@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   root 'application#index'
   resources :location_sets
+  
+  scope '/weather' do
+    get '/city/:name' => 'weather_data#city'
+    get '/zipcode/:zip' => 'weather_data#zipcode'
+    get '/cityid/:cityid' => 'weather_data#cityid'
+    get '/coords' => 'weather_data#coords'
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

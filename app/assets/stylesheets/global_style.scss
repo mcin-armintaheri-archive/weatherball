@@ -5,12 +5,10 @@
 
 $sidebar-width: 290px;
 $toggle-tab-width: 30px;
-$search-height: 123px;
-$advanced-search-height: 122px;
 
 $light-green: #9CBF44;
 $cream: #FFF6DC;
-
+$forecast-width: 5000px;
 
 
 @include keyframes(slide-in) {
@@ -23,15 +21,6 @@ $cream: #FFF6DC;
     100%   { left: (-$sidebar-width); }
 }
 
-@include keyframes(expanded) {
-    0%     { height: $search-height; }
-    100%   { height: ($advanced-search-height + $search-height); }
-}
-
-@include keyframes(retracted) {
-    0%     { height: ($advanced-search-height + $search-height); }
-    100%   { height: $search-height; }
-}
 
 html, body {
     margin: 0;
@@ -39,22 +28,97 @@ html, body {
     height: 100%;
 }
 
+.we-pp-wrapper {
+  background-color: #888;
+}
+
 .thin-shadow {
     @include box-shadow(1px, 1px, 3px, #000);
 }
 
-#canvas {
-    background-image: url('minimal-earth.png');
+.stat-icon {
+    float: left;
+    height: 4.5em;
+    width: 4.5em;
+}
+
+span.temp {
+    font-size: 2.8em;
+    
+    sup {
+        font-size: 0.5em;
+    }
+}
+
+.mark-temp {
+    span {
+        font-size: 1.8em;
+    
+        sup {
+            font-size: 0.5em;
+        }
+    }
+}
+
+
+.forecast-list {
+    
+    .fcast-item {
+        width: 70px;
+        padding: 5px 5px;
+        img {
+            position: relative;
+            left: -10px;
+        }
+        
+        table {
+            border-spacing: 10px;
+            td th {
+                padding: 10px;
+            }
+        }
+    }
+}
+
+.weather-marker {
+    width: 220px;
+    height: 100%;
+    h5 {margin: 1px 0;}
+    h6 {margin: 1px 0;}
+    
+    .stat-icon {
+        margin-right: 10px;
+    }
+    
+    .temp {
+        margin-left: 10px;
+    }
+    
+    .stat-icon-container {
+        padding: 0 0;
+    }
 }
 
 #canvas-wrap {
-    z-index: 0;
     position: relative;
+    top: 0;
+    left: 0;
+    z-index: 0;
     width: 100%;
     height: 100%;
+    
+    #canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('minimal-earth.png');
+    }
+    
     .ui {
-        z-index: 2;
         position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
         
         &#sidebar-container {
             position: relative;
@@ -88,22 +152,9 @@ html, body {
                         margin-bottom: 10px;
                     }
                     
-                    &.expanded {
-                        @include animation('expanded 0.1s ease-out forwards');
-                    }
-                        
-                    &.retracted {
-                        @include animation('retracted 0.1s ease-out forwards');
-                    }
-                    
-                    #advanced-search {
-                        margin-top: 20px;
-                        margin-bottom: 50px;
-                        display: block;
-                        &.vanish { display: none; }
-                    }
                     
                     #advanced-search-toggle {
+                        margin-top: 20px;
                         border-bottom: solid;
                         border-width: 4px;
                         border-radius: 6px;
@@ -120,8 +171,34 @@ html, body {
                 
                 #location-list {
                     margin-top: 30px;
-                    .well {
+                    margin-bottom: 100px;
+                    background-color: $cream;
+                    .location-entry {
+                        font-size: 0.85em;
+                        padding: 5px 1px;
                         background: darken($cream, 10%);
+                        
+                        h5 {margin: 1px 0;}
+                        h6 {margin: 1px 0;}
+                        
+                        &:hover {
+                            $hover-intensity: 25%;
+                            background: darken($cream, $hover-intensity);
+                        }
+                        
+                        .row {
+                            margin: 0px 0px;
+                        }
+                        
+                        .time {
+                            font-size: 0.85em;
+                        }
+                        
+                        .list-weather-temp {
+                            margin-top: 10px;
+                            margin-bottom: 15px;
+                        }
+                        
                     }
                 }
             }
@@ -144,3 +221,4 @@ html, body {
         }
     }
 }
+

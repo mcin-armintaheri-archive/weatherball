@@ -1,4 +1,3 @@
-ruby '2.2.1'
 source 'https://rubygems.org'
 
 
@@ -10,9 +9,9 @@ gem 'react-rails'
 gem 'classnames-rails', '~> 1.0'
 gem 'redis-rails'
 gem 'compass', '~> 1.0', '>= 1.0.3'
+gem 'rest-client', '~> 1.8'
 # Use sqlite3 as the database for Active Record
-# gem 'sqlite3'
-gem 'pg'
+gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -29,6 +28,7 @@ gem 'scrollbar-rails'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
+gem 'json'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
