@@ -10,8 +10,10 @@ gem 'classnames-rails', '~> 1.0'
 gem 'redis-rails'
 gem 'compass', '~> 1.0', '>= 1.0.3'
 gem 'rest-client', '~> 1.8'
-# Use postgresql as the database for Active Record
+
+#Databases
 gem 'pg'
+gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

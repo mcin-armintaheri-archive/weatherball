@@ -178,12 +178,26 @@ span.temp {
                         padding: 5px 1px;
                         background: darken($cream, 10%);
                         
+                        .entry-control {
+                            margin-top: 40px;
+                            padding: 0 0;
+                            .entry-control-button {
+                                padding: 2px 2px;
+                                margin: 1px 1px;
+                                text-align: center;
+                                background: darken($cream, 25%);
+                                
+                                &:hover {
+                                    background: darken($cream, 30%);
+                                }
+                            }
+                        }
+                        
                         h5 {margin: 1px 0;}
                         h6 {margin: 1px 0;}
                         
                         &:hover {
-                            $hover-intensity: 25%;
-                            background: darken($cream, $hover-intensity);
+                            background: darken($cream, 15%);
                         }
                         
                         .row {

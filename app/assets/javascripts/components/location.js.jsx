@@ -10,7 +10,9 @@ var LocationListEntry = React.createClass({
     icon: React.PropTypes.string,
     temperature: React.PropTypes.number,
     description: React.PropTypes.string,
-    forecasts: React.PropTypes.array
+    forecasts: React.PropTypes.array,
+    search: React.PropTypes.func,
+    remove: React.PropTypes.func
   },
   
   getInitialState: function () {
@@ -58,10 +60,9 @@ var LocationListEntry = React.createClass({
     return (
       <div id={this.props.cityName.split(' ').join('-') + "-item"} 
            className="row location-entry list-group-item">
-        <div  className="list-weather-header"
-              onClick={this.handleAccordion}>
+        <div  className="list-weather-header">
           <div className="row">
-            <div className="col-xs-7">
+            <div className="col-xs-8">
               <div className="row">
                 <h5>{this.props.cityName}</h5>
               </div>
@@ -71,8 +72,26 @@ var LocationListEntry = React.createClass({
               <div className="row">
                 <h5>{description}</h5>
               </div>
+              <div className="row">
+                <div className="col-xs-12 entry-control">
+                  <div className="row">
+                    <div className="col-xs-3 panel entry-control-button"
+                         onClick={this.props.remove}>
+                      <span className="glyphicon glyphicon-trash"></span>
+                    </div>
+                    <div className="col-xs-3 panel entry-control-button"
+                         onClick={this.props.search}>
+                      <span className="glyphicon glyphicon-globe"></span>
+                    </div>
+                    <div className="col-xs-3 panel entry-control-button"
+                         onClick={this.handleAccordion}>
+                      <span className="glyphicon glyphicon-time"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="col-xs-5">
+            <div className="col-xs-4">
               <div className="row stat-icon-container">
                 <img  src={"http://openweathermap.org/img/w/" + this.props.icon + ".png"}
                       className="stat-icon"/>
@@ -92,6 +111,5 @@ var LocationListEntry = React.createClass({
         </div>
       </div>
     );
-    //todo: display forcast
   }
 });

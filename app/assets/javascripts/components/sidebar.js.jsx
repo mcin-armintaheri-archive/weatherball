@@ -30,6 +30,18 @@ var Sidebar = React.createClass({
   },
   
   pushLocation: function(wdata) {
+    var search = function () {
+        this.addWeatherEntry(wdata.name, wdata);
+    }.bind(this)
+    
+    var remove = function () {
+        this.state.weatherEntries[wdata.name].marker.closePopup()
+        this.state.weatherEntries[wdata.name].marker.removeFrom(earth)
+        this.state.locationList[wdata.name] = undefined
+        
+        this.setState(this.state)
+    }.bind(this)
+    
     var data = wdata.cur;
     var element = (
       <LocationListEntry  key={data.id + '-item'}  
@@ -38,7 +50,9 @@ var Sidebar = React.createClass({
                           temperature={data.main.temp}
                           description={data.weather[0].description}
                           forecasts={wdata.fcast}
-                          time={data.timezone} />
+                          time={data.timezone} 
+                          search={search}
+                          remove={remove} />
     );
     
     this.state.locationList[data.name] = element;
